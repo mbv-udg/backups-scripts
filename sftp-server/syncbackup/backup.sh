@@ -1,7 +1,7 @@
 #!/bin/bash
 
 readonly date=$(date +%F_%H-%M)
-readonly remote="192.168.18.178"
+readonly remote="192.168.126.35"
 
 strmember=$(getent group sftp | awk -F: '{print $4}' | tr "," " ")
 members=( $strmember )
