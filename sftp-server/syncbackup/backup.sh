@@ -12,7 +12,7 @@ for m in "${members[@]}"; do
     path="${dir}/${date}"
 
     # Files backups
-    rsync -azuo --rsync-path="mkdir -p ${path} && rsync" $sourcedir xarxes@$remote:$path
+    rsync -az --rsync-path="mkdir -p ${path} && rsync" $sourcedir xarxes@$remote:$path
 
     # DB backups
     db="${dir}/db_${date}"
